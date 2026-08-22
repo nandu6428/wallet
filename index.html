@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Expense Tracker</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- TOP BAR -->
+    <header class="topbar">
+
+        <div>
+            <h1>Expense Tracker</h1>
+            <p>Manage your expenses</p>
+        </div>
+
+        <button class="add-main-btn" id="openPopup">
+            + Add Expense
+        </button>
+
+    </header>
+
+
+    <!-- MAIN AREA -->
+    <main class="home-container">
+
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+
+            <h2>My Expenses</h2>
+
+            <div id="expenseList" class="expense-list">
+                <!-- Expenses will appear here -->
+            </div>
+
+        </aside>
+
+
+        <!-- HOME CONTENT -->
+        <section class="home-content">
+
+            <div class="welcome-card">
+
+                <div class="welcome-icon">
+                    💰
+                </div>
+
+                <h2>Welcome to Expense Tracker</h2>
+
+                <p>
+                    Create an expense from the button above.
+                    Your expenses will appear in the sidebar.
+                </p>
+
+                <button class="add-main-btn" id="openPopup2">
+                    + Add Expense
+                </button>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ADD EXPENSE POPUP -->
+    <div class="popup-overlay" id="popup">
+
+        <div class="popup">
+
+            <button class="close-btn" id="closePopup">
+                ×
+            </button>
+
+            <h2>Add Expense</h2>
+
+            <p class="popup-subtitle">
+                Create a new expense
+            </p>
+
+            <form id="expenseForm">
+
+                <div class="form-group">
+
+                    <label for="expenseName">
+                        Expense Name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="expenseName"
+                        placeholder="Example: X"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="expenseAmount">
+                        Amount
+                    </label>
+
+                    <input
+                        type="number"
+                        id="expenseAmount"
+                        placeholder="₹ 0"
+                        min="0"
+                        step="0.01"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="expenseDate">
+                        Date
+                    </label>
+
+                    <input
+                        type="date"
+                        id="expenseDate"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="expenseDescription">
+                        Description
+                    </label>
+
+                    <textarea
+                        id="expenseDescription"
+                        placeholder="Enter a description..."
+                    ></textarea>
+
+                </div>
+
+
+                <button type="submit" class="add-button">
+                    Add
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+<div class="creator-name">
+    Made by Nandakishore C V
+</div>
+
+<style>
+    .creator-name {
+        text-align: center;
+        font-size: 13px;
+        margin-top: 30px;
+        padding-bottom: 15px;
+        opacity: 0.7;
+    }
+</style>
+</body>
+
+</html>
