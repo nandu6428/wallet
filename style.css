@@ -926,4 +926,247 @@ body {
     background: #ffffff;
     color: #000000;
     border-color: #ffffff;
+}/* ================================
+   SMOOTH WEBSITE ANIMATIONS
+   ================================ */
+
+/* Whole page fade-in */
+body {
+    animation: pageFade 0.6s ease-in-out;
+}
+
+@keyframes pageFade {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+/* ================================
+   SIDEBAR ANIMATION
+   ================================ */
+
+.sidebar {
+    animation: sidebarSlide 0.6s ease-out;
+}
+
+@keyframes sidebarSlide {
+    from {
+        transform: translateX(-30px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+
+/* ================================
+   SIDEBAR BUTTONS
+   ================================ */
+
+.sidebar a,
+.sidebar button {
+    transition:
+        transform 0.2s ease,
+        background-color 0.2s ease,
+        color 0.2s ease;
+}
+
+.sidebar a:hover,
+.sidebar button:hover {
+    transform: translateX(5px);
+}
+
+
+/* ================================
+   MAIN CONTENT
+   ================================ */
+
+.main-content {
+    animation: contentAppear 0.7s ease-out;
+}
+
+@keyframes contentAppear {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* ================================
+   CARDS
+   ================================ */
+
+.card,
+.expense-card,
+.summary-card {
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.card:hover,
+.expense-card:hover,
+.summary-card:hover {
+    transform: translateY(-4px);
+}
+
+
+/* ================================
+   ADD EXPENSE BUTTON
+   ================================ */
+
+.add-expense,
+.add-expense-btn,
+button[type="submit"] {
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.add-expense:hover,
+.add-expense-btn:hover,
+button[type="submit"]:hover {
+    transform: translateY(-2px) scale(1.02);
+}
+
+.add-expense:active,
+.add-expense-btn:active,
+button[type="submit"]:active {
+    transform: scale(0.97);
+}
+
+
+/* ================================
+   DELETE BUTTON
+   ================================ */
+
+.delete-btn {
+    transition:
+        transform 0.2s ease,
+        opacity 0.2s ease;
+}
+
+.delete-btn:hover {
+    transform: scale(1.08);
+}
+
+.delete-btn:active {
+    transform: scale(0.92);
+}
+
+
+/* ================================
+   INPUT BOXES
+   ================================ */
+
+input,
+select,
+textarea {
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease,
+        transform 0.2s ease;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    transform: translateY(-1px);
+}
+
+
+/* ================================
+   EXPENSE ITEMS APPEAR
+   ================================ */
+
+.expense-item {
+    animation: expenseAppear 0.45s ease-out;
+}
+
+@keyframes expenseAppear {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* ================================
+   HEADINGS
+   ================================ */
+
+h1,
+h2,
+h3 {
+    animation: headingAppear 0.6s ease-out;
+}
+
+@keyframes headingAppear {
+    from {
+        opacity: 0;
+        transform: translateX(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+/* ================================
+   FOOTER
+   ================================ */
+
+footer {
+    animation: footerFade 1s ease-out;
+}
+
+@keyframes footerFade {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+/* ================================
+   SMOOTH SCROLLING
+   ================================ */
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+/* ================================
+   REDUCE ANIMATIONS IF USER
+   PREFERS LESS MOTION
+   ================================ */
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
 }
