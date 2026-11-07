@@ -34,12 +34,15 @@
         </div>
 
 
-        <a href="index.html"
-           class="add-main-btn back-button">
-
-            ← Home
-
-        </a>
+        <div class="topbar-actions">
+            <button class="analysis-nav-btn" id="tabAnalysisButton">
+                📊 Category Analysis
+            </button>
+            <a href="index.html"
+               class="add-main-btn back-button">
+                ← Home
+            </a>
+        </div>
 
     </header>
 
@@ -75,44 +78,6 @@
 
                 <strong id="selectedAmount">
                     ₹0
-                </strong>
-
-            </div>
-
-        </section>
-
-
-
-        <!-- ORIGINAL DETAILS -->
-
-        <section class="details-card">
-
-            <h2>
-                Details
-            </h2>
-
-
-            <div class="detail-row">
-
-                <span>
-                    Created Date
-                </span>
-
-                <strong id="selectedDate">
-                    —
-                </strong>
-
-            </div>
-
-
-            <div class="detail-row">
-
-                <span>
-                    Description
-                </span>
-
-                <strong id="selectedDescription">
-                    —
                 </strong>
 
             </div>
@@ -199,6 +164,28 @@
 
                 </div>
 
+
+
+                <div class="form-group">
+
+                    <label for="detailCategory">
+                        Category
+                    </label>
+
+                    <select id="detailCategory" required>
+                        <option value="transport">🚗 Transport</option>
+                        <option value="food">🍔 Food</option>
+                        <option value="grocery">🛒 Grocery</option>
+                        <option value="household">🏠 Household</option>
+                        <option value="personal">👤 Personal</option>
+                        <option value="school">📚 School</option>
+                        <option value="health">🏥 Health</option>
+                        <option value="shopping">🛍️ Shopping</option>
+                        <option value="entertainment">🎮 Entertainment</option>
+                        <option value="others" selected>📌 Others</option>
+                    </select>
+
+                </div>
 
 
                 <div class="form-group">
